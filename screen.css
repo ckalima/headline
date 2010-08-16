@@ -1,0 +1,270 @@
+/* -----------------------------------------------------------------------
+
+ Blueprint CSS Framework 0.9
+ http://blueprintcss.org
+
+----------------------------------------------------------------------- */
+
+/* reset.css */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+article, aside, dialog, figure, footer, header, hgroup, nav, section {display:block;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+a:active { outline: none; }
+
+/* typography.css */
+html {font-size:100.01%;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+h1 {font-size:3em;line-height:1;margin-bottom:0.5em;}
+h2 {font-size:1.6em;margin-bottom:0.75em;}
+h3 {font-size:1.3em;line-height:1;margin-bottom:1em;}
+h4 {font-size:1.1em;line-height:1.25;margin-bottom:1.25em;}
+h5 {font-size:1em;font-weight:bold;margin-bottom:1.5em;}
+h6 {font-size:1em;font-weight:bold;}
+h1 img, h2 img, h3 img, h4 img, h5 img, h6 img {margin:0;}
+p { margin: 1.5em 0; }
+p img.left {float:left;margin:1.5em 1.5em 1.5em 0;padding:0;}
+p img.right {float:right;margin:1.5em 0 1.5em 1.5em;}
+blockquote {margin:1.5em;font-style:italic;}
+strong {font-weight:bold;}
+em, dfn {font-style:italic;}
+dfn {font-weight:bold;}
+sup, sub {line-height:0;}
+abbr, acronym {border-bottom:1px dotted #666;}
+address {margin:0 0 1.5em;font-style:italic;}
+pre {margin:1.5em 0;white-space:pre;}
+pre, code, tt {font:1em 'andale mono', 'lucida console', monospace;line-height:1.5;}
+li ul, li ol {margin:0;}
+ul, ol {margin:0 1.5em 1.5em 0;padding-left:3.333em;}
+ul {list-style-type:disc;}
+ol {list-style-type:decimal;}
+dl {margin:0 0 1.5em 0;}
+dl dt {font-weight:bold;}
+dd {margin-left:1.5em;}
+table {margin-bottom:1.4em;width:100%;}
+th {font-weight:bold;}
+th, td, caption {padding:4px 10px 4px 5px;}
+tfoot {font-style:italic;}
+.small {font-size:.8em;margin-bottom:1.875em;line-height:1.875em;}
+.large {font-size:1.2em;line-height:2.5em;margin-bottom:1.25em;}
+.hide {display:none;}
+.first {margin-left:0;padding-left:0;}
+.last {margin-right:0;padding-right:0;}
+.top {margin-top:0;padding-top:0;}
+.bottom {margin-bottom:0;padding-bottom:0;}
+
+/* forms.css */
+label {font-weight:bold;}
+fieldset {padding:1.4em;margin:0 0 1.5em 0;border:1px solid #ccc;}
+legend {font-weight:bold;font-size:1.2em;}
+input[type=text], input[type=password], input.text, input.title, textarea, select {background-color:#fff;border:1px solid #bbb;}
+input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus {border-color:#666;}
+input[type=text], input[type=password], input.text, input.title, textarea, select {margin:0.5em 0;}
+input.text, input.title {width:300px;padding:5px;}
+input.title {font-size:1.5em;}
+textarea {width:390px;height:250px;padding:5px;}
+input[type=checkbox], input[type=radio], input.checkbox, input.radio {position:relative;top:.25em;}
+form.inline {line-height:3;}
+form.inline p {margin-bottom:0;}
+.error, .notice, .success {padding:.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error {background:#FBE3E4;color:#8a1f11;border-color:#FBC2C4;}
+.notice {background:#FFF6BF;color:#514721;border-color:#FFD324;}
+.success {background:#E6EFC2;color:#264409;border-color:#C6D880;}
+.error a {color:#8a1f11;}
+.notice a {color:#514721;}
+.success a {color:#264409;}
+
+/* -----------------------------------------------------------------------
+
+ Headline Screen Styles v1.2
+ May 13, 2010
+
+----------------------------------------------------------------------- */
+
+/* layout */
+body {	padding: 0 5px 20px 5px; margin: 0;}
+#body { overflow: hidden; }
+.wrap {	width:870px; margin:0 auto; }
+.col { float: left; border-top: 1px solid;}
+.index-header { padding:7px 20px; margin:0; border-bottom: 1px solid; }
+.item { border-top:1px solid; padding-top:1px; }
+.item .content { padding:20px; }
+.item h5 { padding:7px 0; margin:0; border-top:1px solid; border-bottom:1px solid; }
+#header { border-bottom:1px solid; margin-bottom:1px; text-align: center;}
+#tweetline { border-top: 1px solid; padding: 1.5em 0 2em 0;}
+#tweetline ul, #tweet ul { margin: 0; padding: 0; }
+#sidebar { width: 200px;}
+#sidebar .item h5 { padding-left: 2px; }
+#sidebar .item .content { padding-left:2px; }
+#primary { width:669px; border-left: 1px solid; }
+#index #primary { width: 438px; border-right: 1px solid;}
+#permalink #primary { width: 538px; border-right: 1px solid;}
+.post { padding:0 19px; }
+#index .post, #permalink .post { padding-bottom: 3em; border-bottom:1px solid;}
+#secondary { width: 0; display:none }
+#index #secondary { width: 230px; display:block; }
+#permalink #secondary { width: 130px; display:block; }
+#secondary .item h5 { padding-left:20px; }
+#secondary .item .content { padding-right:0; }
+#footer { margin:-1px 0 0 0 ; padding:10px 1px; border-top:1px solid; overflow:hidden; clear: both;}
+#footer li { list-style:none; }
+#footer .credit { float:left; }
+#footer .nav { float:right; text-align:right; }
+.streampad { padding-bottom: 30px !important; }
+#install-theme { position: absolute; top:26px; right: 3px; text-indent: -9999px; overflow: hidden; }
+#install-theme a { width: 105px; height: 20px; background: transparent url(http://static.tumblr.com/8wirmq7/LzIl213ue/install.png) no-repeat 0 0; display: block; }
+#install-theme a:hover { background-position: 0 -20px; }
+#ie6 { background: #cc0000; color: #fff; padding: 1em; font-size: 1em; text-align: center;}
+#ie6 a { color: #fff; text-decoration: underline; }
+
+/* image handling */
+#header-image { margin: 1.5em 0; max-width:870px;}
+#sidebar img { max-width: 180px; }
+#index #primary img { max-width: 400px; }
+#index #secondary img { max-width: 210px; }
+#permalink #primary img { max-width: 500px; }
+#permalink #secondary img { max-width: 110px; }
+
+/* navigation */
+.nav { margin:0; padding:0; }
+.nav li { list-style:none; }
+#nav-main { padding: 10px 0; margin: 10px 0;}
+#nav-main a { padding:5px 10px 5px 2px; display:block; text-decoration:none; }
+#primary .nav { border-top:1px solid; margin-top:1px; padding: 10px 20px; overflow:hidden; border-bottom: 1px solid;}
+#primary .nav .newer { float:left; width:35%; min-width:35%; text-align:left;}
+#primary .nav .page { float:left; width:30%; min-width:30%; text-align:center; padding-top: .3em;}
+#primary .nav .older { float:right; width:35%; min-width:35%; text-align:right;}
+
+/* posts */
+.post dl { margin: 1.5em 0 2em 0; overflow: hidden; padding: 1px;}
+.post dt { float: left; }
+.post dt img { float: left; margin-right: 1em; }
+.post dd { float: right; }
+.post .disqus, .post #comments, #post-notes { margin:3em 0 0 0; }
+#post-notes, .post #comments { padding: 3em 0 0 0;}
+.root { border-bottom: 1px solid;padding:7px 20px;}
+.root a { background: url(http://static.tumblr.com/8wirmq7/12xl213vt/reblog.png) no-repeat 0 1px;  display: block; padding: 0 0 0 20px;}
+.post .chat { margin: 0; padding: 0; }
+.post .chat li { list-style: none; padding: 8px 0; border-top: 1px dotted;}
+.post .chat > li:first-child { border: none; }
+.post .chat span { font-weight: bold; }
+.post .asker img { vertical-align: -10px; margin:0 5px 0 25px;}
+.post .answer { padding-top: .5em; }
+.post .audio { list-style: none; margin: 0; padding: 0; width: 100%; overflow: hidden; background: #000; margin-bottom: 1em;}
+.post .audio li { float: left; height: 30px; background: #000;}
+.post .audio .artwork { border-right: 2px solid; }
+.post .audio .artwork img { width: 30px; height: 30px;}
+.artist-info { margin-bottom: 1em; }
+.post .audio .player { width: 210px; height: 29px; margin-top: 1px; }
+.post .audio .playcount { float: right; color: #999; font-size: .6em; font-family: Helvetica, Arial, sans; text-align: right; padding-right:10px; height: 20px; margin-top: 4px;}
+.audio .caption { border-top: 1px dotted; margin: 1.5em 0; }
+#permalink .audio .artwork { display: none; }
+#album-artwork { text-align: center; margin-bottom: 1.5em;}
+#album-artwork img { border: 1px solid; padding: 10px; max-width: 478px !important; }
+
+/* items */
+.item:first-child, .item:first-child h5 { border-top:none !important;}
+.item:first-child { padding-top: 0; }
+.item .content :last-child { margin-bottom: 0 !important; }
+#contributors ul { margin: 0 0 10px 0; padding: 0; overflow: hidden;}
+#contributors li { list-style: none; float: left;}
+#contributors ul li ul { margin: 0;}
+#contributors ul li ul li { float: none; }
+#contributors .thumb { width: 40px; }
+#contributors .thumb img { border: 1px solid; }
+#contributors .info { width: 168px; }
+#following .content { padding-right: 0 !important; }
+#following img {margin: 1px;border: 1px solid; }
+#likes-list h5:first-child { border-bottom: none; }
+#likes-list .content { border-top: 1px solid; }
+#share ul, #tags ul { margin: 0; padding: 0; }
+#share li, #tags li { list-style: none; margin: 0;}
+#share li a { padding-top: 5px; padding-bottom: 5px; display: block;}
+#tags li a { padding: 4px 0; display: block; line-height: 110%;}
+
+/* notes */
+ol.notes { padding: 0px; margin: 25px 0px; list-style-type: none; border-bottom: solid 1px; }
+ol.notes li.note { border-top: solid 1px; padding: 10px; }
+ol.notes li.note img.avatar { vertical-align: -4px; margin-right: 10px; width: 16px; height: 16px; }
+ol.notes li.note span.action { font-weight: normal; }
+ol.notes li.note .answer_content { font-weight: normal; }
+ol.notes li.note blockquote { border: none; padding: 4px 0; margin: 10px 0px 0px 25px;}
+ol.notes li.note blockquote a { text-decoration: none; }
+
+/* likes */
+#likes-list .content {overflow:hidden;}
+ul#likes { list-style-type: none; margin: 0; padding: 0; overflow: hidden;}
+li.like_post { width: 210px; padding: 0 0 2em 0; margin:0 0 2em 0; border-bottom:1px dotted; float: left; }
+li.like_post img { max-width: 100%; }
+li.like_post blockquote { margin: 0; padding: 0.5em; }
+li.like_post ol, li.like_post ul { margin: 0 0 0 1.5em; padding: 0; }
+li.like_post .like_link a { font-weight: bold; }
+li.like_post .like_title { font-weight: bold; margin-bottom: 1em;}
+li.like_post .post_info_bottom { margin: 1em 0 0 0; display: block !important; }
+#likes-list .more-likes { display: block; padding-top: 1.5em; }
+
+/* icons */
+.twitter a { background: url(http://static.tumblr.com/8wirmq7/17el213we/twitter_16.png) no-repeat left center; padding-left: 25px !important; }
+.facebook a { background: url(http://static.tumblr.com/8wirmq7/mGLl213ws/facebook_16.png) no-repeat left center; padding-left: 25px !important; }
+.digg a { background: url(http://static.tumblr.com/8wirmq7/GNrl213x3/digg_16.png) no-repeat left center; padding-left: 25px !important; }
+
+/* search */
+#search { height: 30px; border-bottom: 1px solid; opacity:0.9;}
+#search form { width: 100%; margin: 0; padding: 0;}
+#search input { margin: 0; padding: 0; border: none;}
+#search #search-input { width: 166px; height: 30px; font-size: .9em; padding: 0 2px;}
+#search-button { background: url(http://static.tumblr.com/8wirmq7/zWwl213tb/search.png) no-repeat; width: 25px; overflow: hidden; text-indent: -9999px; height: 30px; float: right !important; cursor: pointer;}
+
+/* shapes */
+.post .quote, .bubble { position:relative; padding:1em; margin:1em 0; -moz-border-radius:10px; -webkit-border-radius:10px; border-radius:10px; font-size: 1.3em; line-height: 120%;}
+.post .quote:after, .bubble:after { content:"\00a0"; display:block; /* reduce the damage in FF3.0 */ position:absolute; z-index:-1; bottom:-20px; /* value = - border-top-width - border-bottom-width */ left:30px; /* controls horizontal position */	width:0; height:0; border-width:10px 10px; /* vary these values to change the angle of the vertex */ border-style:solid; }
+
+/* typography */
+h1 { margin:1em 0; line-height: 1.2em;}
+h2, .question { font-weight: normal; line-height: 120%; margin:.75em 0; }
+h5, .index-header { font-family:Helvetica, Arial, sans; font-size:.7em; text-shadow: #fff 1px 1px 0px; font-weight: bold;}
+blockquote { background: #eee;margin: 1em 0; padding: 1em; }
+.post .chat li span { font-family: Helvetica, Arial, sans; }
+.asker { font-style: italic; margin: 1em 0; }
+#tweetline ul li { list-style: none !important; font-size: 1.7em;}
+#tweet ul li { list-style: none; line-height: 130%; margin-bottom: 20px; border-bottom: 0px dotted;}
+.content > p:first-child { margin: 0 !important;}
+#contributors ul li ul li { font-family: Helvetica, Arial, sans; font-size: 0.85em; letter-spacing: .1em; }
+#footer { font-family: Helvetica, Arial, sans; }
+#footer li { font-size: .7em; }
+.hi-res a { display: block; font-size: .7em; font-family: Helvetica,Arial,sans; font-style: italic; text-shadow: #fff 1px 1px 0px; background: url(http://static.tumblr.com/8wirmq7/Lgol2141e/magnify_plus.gif) no-repeat right 5px; padding: 1px 17px 0 0; text-align: right;}
+#sidebar .content, #secondary .content { font-size: .8em; }
+#nav-main {font-family: Helvetica, Arial, sans; font-weight: bold; font-size: .7em; letter-spacing: .1em; }
+#primary .nav li { font-size: 1.3em; }
+#primary .nav .page { font-size: .9em; text-shadow: #fff 1px 1px 0px; }
+.post { line-height: 130%; }
+.post dl a, .post .disqus, .root { font-family: Helvetica, Arial, sans; font-size: .7em; font-weight: bold; text-shadow: #fff 1px 1px 0px; }
+#tags li, #share li { font-size: .85em; font-family: Helvetica, Arial sans; font-weight: bold; text-shadow: #fff 1px 1px 0px; }
+
+/* color */
+body { color: #333; background: #efefef url(http://static.tumblr.com/8wirmq7/rSal2141v/bg-default.png) repeat 0 0;}
+a { color: #006699; text-decoration: none; }
+a:hover { color: #006699; text-decoration: underline;}
+#header h1 a { color: #333 !important; }
+#contributors ul li ul li em, #primary .nav, #footer { color: #999; }
+#footer a, .hi-res a { color:#666; text-decoration: none;  }
+.hi-res a:hover { color: #006699; }
+#nav-main a, #primary .nav a { color:#999; text-decoration: none; text-shadow: #fff 1px 1px 0px;}
+#primary .nav { background-color: #eee; opacity:0.9;}
+#nav-main a:hover, #primary .nav a:hover { color: #006699; }
+#nav-main a:hover { background: url(http://static.tumblr.com/8wirmq7/VIkl2142y/arrow-left.png) no-repeat right center; }
+h5, #tweetline { color: #666; }
+.post dl a, .post .disqus a, #tags li a, ol.notes li.note blockquote a { color: #999; text-decoration: none; }
+.post dl a:hover, .post .disqus a:hover, #tags li a:hover, ol.notes li.note blockquote a:hover { color: #333; }
+.post .disqus, .question span { color:#ccc }
+.root, .index-header { background-color: #FFFEE9; }
+.root a { color: #666; }
+.item, .item h5, #search, #header, #primary, #index #primary, #permalink #primary, #index .post, #permalink .post, .post, #primary .nav, #footer, blockquote, #following img, #contributors .thumb img, #likes-list .content, .root, .col, #tweetline, ol.notes, ol.notes li.note, .index-header, .post .chat li, li.like_post, .audio .caption, #album-artwork img { border-color: #ccc; }
+#search, #search #search-input { background-color: #eee}
+.post .quote, .bubble { color: #fff; background-color:#333; }
+.post .quote:after, .bubble:after { border-color:#333 transparent transparent; }

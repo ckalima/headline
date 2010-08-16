@@ -1,0 +1,485 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<!--
+		Headline v1.5
+		August 16, 2010
+		Design by Airspace Workshop
+		http://www.airspaceworkshop.com
+	-->
+
+	<!-- Default Variables -->
+	<meta name="color:Background" content="#efefef"/>
+	<meta name="color:Background Alt" content="#eeeeee"/>
+	<meta name="color:Site Title Text" content="#333333"/>
+	<meta name="color:Body Text" content="#333333"/>
+	<meta name="color:Meta Text" content="#666666"/>
+	<meta name="color:Sidebar Heading Text" content="#666666"/>
+	<meta name="color:Navigation Text" content="#999999"/>
+	<meta name="color:Text Shadow" content="#ffffff"/>
+	<meta name="color:Links" content="#006699"/>
+	<meta name="color:Borders" content="#cccccc"/>
+	<meta name="font:Headings" content="Futura"/>
+	<meta name="font:Body" content="Georgia"/>
+	<meta name="font:Meta" content="Helvetica"/>
+	<meta name="image:Header" content=""/>
+	<meta name="image:Background" content="http://static.tumblr.com/8wirmq7/nUTl1z005/bg-default.png"/>
+	<meta name="if:Tile Background Image" content="1"/>
+	<meta name="if:Show Post Notes" content="1"/>
+	<meta name="if:Show Twitter Headline" content="0"/>
+	<meta name="if:Show Twitter Sidebar" content="0"/>
+	<meta name="if:Show People I Follow" content="1"/>
+	<meta name="if:Show Group Members" content="1"/>
+	<meta name="if:Show Random Post Link" content="0"/>
+	<meta name="if:Show Mobile Layout Link" content="0"/>
+	<meta name="if:Enable Streampad" content="0"/>
+	<meta name="text:Contact Email Address" content=""/>
+	<meta name="text:Tag Navigation One" content="" />
+	<meta name="text:Tag Navigation Two" content="" />
+	<meta name="text:Tag Navigation Three" content="" />
+	<meta name="text:Twitter Sidebar Count" content="3"/>
+	<meta name="text:Disqus Shortname" content=""/>
+	<meta name="text:Google Analytics Web Property ID" content=""/>
+	<meta name="text:Typekit Kit ID" content=""/>
+	<meta name="text:Twitter API Key" content=""/>
+	<meta name="text:Amazon Tracking ID" content=""/>
+	<meta name="text:VigLink API Key" content=""/>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>{block:PostSummary}{PostSummary} &ndash; {/block:PostSummary}{block:TagPage}{Tag} &ndash; {/block:TagPage}{block:DayPage}{Month} {DayOfMonth}, {Year} &ndash; {/block:DayPage}{block:SearchPage}Search Results For "{SearchQuery}" &ndash;  {/block:SearchPage}{Title}{block:IndexPage} &ndash; Page {CurrentPage}{/block:IndexPage}</title>
+	<meta name="description" content="{block:TagPage}A listing of all posts tagged '{Tag}'. {/block:TagPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:SearchPage}Search Results For {SearchQuery}{/block:SearchPage}{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}"/>
+
+	{block:IndexPage}
+	<meta name="robots" content="noindex,follow" />
+	{/block:IndexPage}
+	{block:PermalinkPage}
+	<meta name="keywords" content="{block:Posts}{block:HasTags}{block:Tags}{Tag}, {/block:Tags}{/block:HasTags}{block:Posts}" />
+	<meta name="robots" content="index,nofollow" />
+	{/block:PermalinkPage}
+
+	<link rel="shortcut icon" href="{Favicon}"/>
+	<link rel="alternate" type="application/rss+xml" href="{RSS}"/>
+
+	<link rel="stylesheet" href="http://static.tumblr.com/8wirmq7/2Iwl2p3xe/screen.v1.3.css" type="text/css" media="screen, projection"/>
+	<!--[if IE7]><link rel="stylesheet" href="http://static.tumblr.com/8wirmq7/Cgvl21f2w/ie7.v1.css" type="text/css" media="screen, projection"/><![endif]-->
+
+   	<style type="text/css">
+	/* Dynamic Typography and Color */
+	
+	body {font-family: {font:Body}; }
+	h1, h2, h3, h4 { font-family: {font:Headings}; text-shadow: {color:Text Shadow} }
+	h5, .index-header { font-family:{font:Meta}; text-shadow: {color:Text Shadow} 1px 1px 0px;}
+	blockquote { background: {color:Background Alt}; }
+	.post .chat li span { font-family: {font:Meta}; }
+	#contributors ul li ul li { font-family: {font:Meta}; }
+	#footer { font-family: {font:Meta}; }
+	.hi-res a { font-family: {font:Meta}; text-shadow: {color:Text Shadow} 1px 1px 0px; }
+	#nav-main {font-family: {font:Meta}; }
+	#primary .nav .page { text-shadow: {color:Text Shadow} 1px 1px 0px; }
+	.post dl a, .post .disqus, .root { font-family: {font:Meta}; text-shadow: {color:Text Shadow} 1px 1px 0px; }
+	#tags li, #share li { font-family: {font:Meta}; text-shadow: {color:Text Shadow} 1px 1px 0px; }
+	
+	body { color: {color:Body Text}; background: {color:Background} {block:IfBackgroundImage}url({image:Background}){block:IfTileBackgroundImage}repeat{/block:IfTileBackgroundImage} top center;{/block:IfBackgroundImage} }
+	a { color: {color:Links}; text-decoration: none; }
+	a:hover { color: {color:Links}; text-decoration: underline;}
+	#header h1 a, #tweetline { color: {color:Body Text} !important; }
+	#contributors ul li ul li em { color: {color:Navigation Text}; }
+	#footer a, .hi-res a { color:{color:Meta Text}; text-decoration: none;  }
+	.hi-res a:hover { color: {color:Links}; }
+	#nav-main a, #primary .nav a { color:{color:Navigation Text}; text-decoration: none; text-shadow: {color:Text Shadow} 1px 1px 0px;}
+	#footer { color:{color:Meta Text}; }
+	#primary .nav, #search, #search #search-input { background-color: {color:Background Alt}; color:{color:Navigation Text};}
+	#nav-main a:hover, #primary .nav a:hover { color: {color:Links}; }
+	h5 { color: {color:Sidebar Heading Text}; }
+	.post dl a, .post .disqus a, #tags li a, ol.notes li.note blockquote a { color: {color:Meta Text}; text-decoration: none; }
+	.post dl a:hover, .post .disqus a:hover, #tags li a:hover, ol.notes li.note blockquote a:hover { color: {color:Body Text}; }
+	.question span { color:{color:Background} }
+	.root, .index-header { background-color: {color:Background Alt}; }
+	.post .disqus, .root a { color: {color:Meta Text}; }
+	.item, .item h5, #search, #header, #primary, #index #primary, #permalink #primary, #index .post, #permalink .post, .post, #primary .nav, #footer, blockquote, #following img, #contributors .thumb img, #likes-list .content, .root, .col, #tweetline, ol.notes, ol.notes li.note, .index-header, .post .chat li, li.like_post, .audio .caption, #album-artwork img { border-color: {color:Borders}; }
+	.post .audio .artwork { border-color:{color:Background Alt}; }
+	.post .quote, .bubble { color: {color:Background}; background-color:{color:Body Text}; }
+	.post .quote:after, .bubble:after { border-color:{color:Body Text} transparent transparent; }
+
+	/* Custom CSS */
+	{CustomCSS}
+	</style>
+     
+	<script type="text/javascript" src="http://static.tumblr.com/8wirmq7/I4Xl21f56/jquery.1.4.2.min.js"></script>
+	
+	{block:IfTypekitKitID}
+	<script type="text/javascript" src="http://use.typekit.com/{text:Typekit Kit ID}.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	{/block:IfTypekitKitID}
+
+	{block:Twitter}<!-- Twitter Javscript Integration -->
+	<script type="text/Javascript" src="http://static.tumblr.com/8wirmq7/jjEl21f6s/jquery.tweet.v1.js"></script>
+	
+	{block:IfShowTwitterHeadline}
+	<script type='text/javascript'>
+	//<![CDATA[
+	$(document).ready(function(){
+		$("#tweetline").tweet({
+			username: {JSTwitterUsername},
+			count: 1,
+			loading_text: '<img src="http://static.tumblr.com/8wirmq7/Ryyl21f7o/loading.gif" alt=""/>'
+		});
+	});
+	//]]>
+	</script>
+	{/block:IfShowTwitterHeadline}
+	{block:IfShowTwitterSidebar}
+	<script type='text/javascript'>
+	//<![CDATA[
+	$(document).ready(function(){
+		$("#tweet").tweet({
+			username: {JSTwitterUsername},
+			count: {text:Twitter Sidebar Count},
+			loading_text: '<img src="http://static.tumblr.com/8wirmq7/Ryyl21f7o/loading.gif" alt=""/>'
+		});
+	});
+	//]]>
+	</script>
+	{/block:IfShowTwitterSidebar}
+	{/block:Twitter}
+
+	{block:IfTwitterAPIKey}
+	<script src="http://platform.twitter.com/anywhere.js?id={text:Twitter API Key}&amp;v=1" type="text/javascript"></script>
+	{/block:IfTwitterAPIKey}
+
+	<script type="text/javascript" src="http://static.tumblr.com/8wirmq7/8rnl21f91/headline.v1.js"></script>
+
+</head>
+<body>
+	<!--[if IE 6]><div id="ie6">Internet Explorer 6 is not supported. We suggest <a href="http://www.microsoft.com/windows/Internet-explorer/default.aspx">updating your browser</a>, or <a href="/mobile">try the mobile version.</a></div><![endif]-->
+
+	<div class="wrap" id="{block:IndexPage}index{/block:IndexPage}{block:PermalinkPage}permalink{/block:PermalinkPage}">
+		<noscript>
+			<div id="warning">Javascript is currently disabled. For best results, please <span>enable javascript</span> or <a href="/mobile">view our mobile version.</a></div>
+		</noscript>    
+
+		<!-- Begin Header -->
+		<div id="header">
+   			{block:IfHeaderImage}<a href="/"><img src="{image:Header}" alt="" id="header-image"/></a>{/block:IfHeaderImage}
+			{block:IfNotHeaderImage}<h1><a href="/">{title}</a></h1>{/block:IfNotHeaderImage}
+			{block:IfShowTwitterHeadline}{block:Twitter}
+			<div class="tweets" id="tweetline"></div>
+			{/block:Twitter}{/block:IfShowTwitterHeadline}
+    	</div>
+		<!-- End Header -->
+
+		<!-- Begin Body Columns -->
+		<div id="body">
+
+		<!-- Begin Sidebar -->
+		<div class="col" id="sidebar">
+			<div id="search">
+				<form method="get" action="/search">
+					<input type="text" value="{SearchQuery}" name="q" id="search-input"/>
+					<input type="submit" value="" id="search-button"/>
+				</form>
+			</div>
+			<ul class="nav" id="nav-main">
+				<li><a href="/" title="{PlaintextTitle}">Home</a></li>
+				{block:IfTagNavigationOne}<li><a href="/tagged/{text:Tag Navigation One}" title="View all posts tagged {text:Tag Navigation One}">{text:Tag Navigation One}</a></li>{/block:IfTagNavigationOne}
+				{block:IfTagNavigationTwo}<li><a href="/tagged/{text:Tag Navigation Two}" title="View all posts tagged {text:Tag Navigation Two}">{text:Tag Navigation Two}</a></li>{/block:IfTagNavigationTwo}
+				{block:IfTagNavigationThree}<li><a href="/tagged/{text:Tag Navigation Three}" title="View all posts tagged {text:Tag Navigation Three}">{text:Tag Navigation Three}</a></li>{/block:IfTagNavigationThree}
+				{block:HasPages}{block:Pages}<li><a href="{URL}" title="{PlaintextLabel}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+				{block:AskEnabled}<li><a href="/ask" title="{PlaintextAskLabel}">{AskLabel}</a></li>{/block:AskEnabled}
+				{block:IfShowRandomPostLink}<li><a href="/random" title="View a random post">Random</a></li>{/block:IfShowRandomPostLink}
+				{block:IfShowMobileLayoutLink}<li><a href="/mobile" title="Optimized version for handsets">Mobile</a></li>{/block:IfShowMobileLayoutLink}
+				{block:SubmissionsEnabled}<li><a href="/submit" title="{PlaintextSubmitLabel}">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+				{block:IfContactEmailAddress}<li><a href="mailto:{text:Contact email address}" title="Contact via email">Contact</a></li>{/block:IfContactEmailAddress}
+			</ul>
+
+			{block:Description}
+			<div class="item" id="about">
+				<h5>About</h5>
+				<div class="content">{Description}</div>
+			</div>
+			{/block:Description}
+			
+		</div>
+		<!-- End Sidebar -->
+
+		<!-- Begin Primary -->
+		<div class="col" id="primary">
+			{block:SearchPage}
+			<div class="index-header">Your search for <em>{SearchQuery}</em> produced <em>{SearchResultCount}</em> results.</div>
+			{/block:SearchPage}
+			{block:TagPage}
+			<div class="index-header">Posts tagged <em>{Tag}</em></div>
+	        {/block:TagPage}
+
+			{block:Posts}
+			{block:PermalinkPage}{block:RebloggedFrom}<div class="root"><a href="{ReblogRootURL}" title="{PlaintextReblogRootTitle}">Original by {ReblogRootTitle}</a></div>{/block:RebloggedFrom}{/block:PermalinkPage}
+			<div class="post tagged-{TagsAsClasses}" id="post-{PostID}">
+				{block:Date}
+				<dl>
+					<dt><a href="{Permalink}" title="Permalink">{12Hour}:{Minutes} {AmPm}{block:NewDayDate} - {ShortDayOfWeek}, {ShortMonth} {DayOfMonth}, {Year}{/block:NewDayDate}</a></dt>
+					<dd>{block:ifShowPostNotes}{block:NoteCount}<a href="{Permalink}#post-notes">{NoteCountWithLabel}</a>{/block:NoteCount}{/block:ifShowPostNotes}</dd>
+				</dl>
+				{/block:Date}
+
+				{block:Video}
+			 		{block:IndexPage}{Video-400}{/block:IndexPage}{block:PermalinkPage}{Video-500}{/block:PermalinkPage}
+					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+				{/block:Video}
+
+				{block:Photo}
+					{LinkOpenTag}<img src="{block:IndexPage}{PhotoURL-400}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-500}{/block:PermalinkPage}" alt="{PhotoAlt}"/>{LinkCloseTag}
+					{block:HighRes}<div class="hi-res"><a href="{PhotoURL-HighRes}" title="View the high-resolution image">High-Res</a></div>{/block:HighRes}
+					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+				{/block:Photo}
+				
+				{block:Photoset}
+					{block:IndexPage}{Photoset-400}{/block:IndexPage}{block:PermalinkPage}{Photoset-500}{/block:PermalinkPage}
+					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+				{/block:Photoset}
+				
+				{block:Audio}
+					{block:Artist}<div class="artist-info">{block:IfAmazonTrackingID}<a href="http://www.amazon.com/gp/search?ie=UTF8&amp;tag={URLEncodedAmazaonTrackingID}&amp;index=digital-music&amp;keywords={URLEncodedArtist}{block:Album}%20{URLEncodedAlbum}{/block:Album}{block:TrackName}%20{URLEncodedTrackName}{/block:TrackName}" title="Download this track">{/block:IfAmazonTrackingID}<strong>{Artist}</strong>{block:TrackName} &mdash; <em>{TrackName}</em>{/block:TrackName}{block:Album}{/block:Album}{block:IfAmazonTrackingID}</a>{/block:IfAmazonTrackingID}</div>{/block:Artist}
+					<ul class="audio">
+						{block:IndexPage}{block:AlbumArt}<li class="artwork">{block:IfAmazonTrackingID}<a href="http://www.amazon.com/gp/search?ie=UTF8&amp;tag={URLEncodedAmazaonTrackingID}&amp;index=digital-music&amp;keywords={URLEncodedArtist}{block:Album}%20{URLEncodedAlbum}{/block:Album}" title="Download this album">{/block:IfAmazonTrackingID}<img src="{AlbumArtURL}" alt="" />{block:IfAmazonTrackingID}</a>{/block:IfAmazonTrackingID}</li>{/block:AlbumArt}{/block:IndexPage}
+						<li class="player">{AudioPlayerBlack}</li>
+						<li class="playcount">{FormattedPlayCount} Plays</li>
+					</ul>
+					{block:PermalinkPage}{block:AlbumArt}<div id="album-artwork">{block:IfAmazonTrackingID}<a href="http://www.amazon.com/gp/search?ie=UTF8&amp;tag={URLEncodedAmazaonTrackingID}&amp;index=digital-music&amp;keywords={URLEncodedArtist}{block:Album}%20{URLEncodedAlbum}{/block:Album}" title="Download this album">{/block:IfAmazonTrackingID}<img src="{AlbumArtURL}" alt="" />{block:IfAmazonTrackingID}</a>{/block:IfAmazonTrackingID}</div>{/block:AlbumArt}{/block:PermalinkPage}
+					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+				{/block:Audio}
+
+				{block:Quote}
+					<div class="quote triangle-isosceles">{Quote}</div>
+					{block:Source}<div class="caption">{Source}</div>{/block:Source}
+				{/block:Quote}
+				
+				{block:Chat}
+					{block:Title}<h2>{Title}</h2>{/block:Title}
+					<ul class="chat">
+						{block:Lines}<li class="{Alt} user_{UserNumber}">{block:Label}<span class="label">{Label}</span>{/block:Label} {Line}</li>{/block:Lines}
+					</ul>
+				{/block:Chat}
+
+				{block:Link}
+					<h2 class="link"><a href="{URL}" class="link" {Target}>{Name}</a></h2>
+					{block:Description}<div class="caption">{Description}</div>{/block:Description}
+				{/block:Link}
+
+				{block:Text}
+					{block:Title}<h2>{Title}</h2>{/block:Title}
+					{Body}
+				{/block:Text}
+			
+				{block:Answer}
+					<div class="question bubble"><span>Q:</span> {Question}</div>
+					<span class="asker"><img src="{AskerPortraitURL-30}" alt="" height="30" width="30"/> {Asker}</span>
+					<div class="caption answer">{Answer}</div>
+				{/block:Answer}
+				
+				{block:IndexPage}{block:IfDisqusShortname}<p class="disqus"><a class="dsq-comment-count" href="{Permalink}#disqus_thread">Comments</a></p>{/block:IfDisqusShortname}{/block:IndexPage}
+
+				{block:PermalinkPage}
+				{block:Date}{block:IfDisqusShortname}
+				<!-- Disqus Integration -->
+				<div id="comments">
+					<div id="disqus_thread"></div><script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script><noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+				</div>
+				{/block:IfDisqusShortname}{/block:Date}
+				{/block:PermalinkPage}
+
+				{block:ifShowPostNotes}
+				{block:PostNotes}
+				<div id="post-notes">
+					<h2>Notes</h2>
+					{PostNotes}
+				</div>
+				{/block:PostNotes}
+				{/block:ifShowPostNotes}
+
+			</div>
+			{/block:Posts}
+			
+			{block:Pagination}
+			<ul class="nav">
+				<li class="newer">{block:PreviousPage}<a href="{PreviousPage}">&larr; Newer</a>{/block:PreviousPage}&nbsp;</li>
+				<li class="page"><span>~</span> {CurrentPage} <em>of</em> {TotalPages} <span>~</span></li>
+				<li class="older">&nbsp;{block:NextPage}<a href="{NextPage}">Older &rarr;</a>{/block:NextPage}</li>
+			</ul>
+			{/block:Pagination}
+			{block:PermalinkPagination}
+			<ul class="nav">
+				<li class="newer">{block:NextPost}<a href="{NextPost}">&larr; Newer</a>{/block:NextPost}&nbsp;</li>
+				<li class="page"><span>~</span> <a href="/" title="Return to the home page">Home</a> <span>~</span></li>
+				<li class="older">&nbsp;{block:PreviousPost}<a href="{PreviousPost}">Older &rarr;</a>{/block:PreviousPost}</li>
+			</ul>
+			{/block:PermalinkPagination}
+		</div>
+		<!-- End Primary -->
+	
+		<!-- Begin Secondary -->
+		<div class="col" id="secondary">
+		
+		{block:IndexPage}
+		
+			{block:IfShowGroupMembers}{block:GroupMembers}
+			<div class="item" id="contributors">
+				<h5>Contributors</h5>
+				<div class="content">
+					{block:GroupMember}
+					<ul>
+						<li class="thumb"><a href="{GroupMemberURL}" title="{GroupMemberTitle}"><img src="{GroupMemberPortraitURL-30}" alt="" height="30" width="30"/></a></li>
+						<li class="info">
+							<ul>
+								<li>{GroupMemberName}</li>
+								<li><a href="{GroupMemberURL}" title="{GroupMemberTitle}">{GroupMemberTitle}</a></li>
+							</ul>
+						</li>
+					</ul>
+					{/block:GroupMember}
+				</div>
+			</div>
+			{/block:GroupMembers}{/block:IfShowGroupMembers}
+
+			{block:Twitter}{block:IfShowTwitterSidebar}
+    		<div class="item" id="twitter">
+    			<h5>Twitter</h5>
+				<div class="content">
+					<div class="tweets" id="tweet"></div>
+					<p><a href="http://twitter.com/{TwitterUsername}" class="follow-me">Follow @{TwitterUsername} on Twitter</a></p>
+				</div>
+			</div>
+			{/block:IfShowTwitterSidebar}{/block:Twitter}
+
+			{block:IfShowPeopleIFollow}{block:Following}
+			<div class="item" id="following">
+				<h5>Following</h5>
+				<div class="content">
+					{block:Followed}<a href="{FollowedURL}" title="{FollowedTitle}"><img src="{FollowedPortraitURL-30}" alt="" height="30" width="30"/></a>{/block:Followed}
+				</div>
+			</div>
+			{/block:Following}{/block:IfShowPeopleIFollow}
+
+	        {block:Likes}
+			<div class="item" id="likes-list">
+				<h5>Likes</h5>
+				<div class="content">
+                {Likes limit="3" summarize="100" width="210"}
+                <span class="more-likes"><a href="http://www.tumblr.com/liked/by/{Name}" title="View more liked posts">More Likes</a></span>
+                </div>
+			</div>
+	        {/block:Likes}
+			
+		{/block:IndexPage}
+		
+		{block:PermalinkPage}
+			
+			{block:Posts}{block:Date}
+			<div class="item" id="author">
+				<h5>Author</h5>
+				<div class="content">
+					<a href="{PostAuthorURL}"><img src="{PostAuthorPortraitURL-96}" alt="" /></a>
+				</div>
+			</div>
+			{/block:Date}{/block:Posts}
+
+			<div class="item" id="share">
+				<h5>Share</h5>
+				<div class="content">
+					<ul>
+						<li class="twitter"><a href="http://twitter.com/home?status={block:Posts}{ShortURL}{/block:Posts} - {Title}">Twitter</a></li>
+						<li class="facebook"><a href="http://www.facebook.com/share.php?u={block:Posts}{ShortURL}{/block:Posts}">Facebook</a></li>
+						<li class="digg"><a href="http://digg.com/submit?url={block:Posts}{ShortURL}{/block:Posts}">Digg</a></li>
+					</ul>
+				</div>
+			</div>
+
+			{block:Posts}{block:HasTags}
+			<div class="item" id="tags">
+				<h5>Tags</h5>
+				<div class="content">
+                    <ul>
+                    	{block:Tags}<li><a href="{TagURL}">{Tag}</a></li>{/block:Tags}
+                    </ul>
+				</div>
+			</div>
+			{/block:HasTags}{block:Posts}
+			
+		{/block:PermalinkPage}
+		
+		</div>
+		<!-- End Secondary -->
+		
+		</div>
+		<!-- End Body Columns -->
+
+		<!-- Begin Footer -->
+		<ul id="footer"{block:IfEnableStreampad} class="streampad"{/block:IfEnableStreampad}>
+			<li class="credit"><a href="http://headlinetheme.tumblr.com/" title="Headline: A Free, Customizable Tumblr Theme">Headline</a> by <a href="http://www.airspaceworkshop.com/?utm_source=tumblr_headline&utm_medium=referral&utm_campaign=sitecredit" title="Made by ASWS">Airspace Workshop</a> for <a href="http://www.tumblr.com">Tumblr</a></li>
+			<li class="nav">{block:Twitter}<a href="http://twitter.com/{TwitterUsername}" class="follow-me"> @{TwitterUsername}</a> / {/block:Twitter}{block:SubmissionsEnabled}<a href="/submit" title="{PlaintextSubmitLabel}">{SubmitLabel}</a> / {/block:SubmissionsEnabled}<a href="/archive">Archive</a> / <a href="{RSS}">RSS</a></li>
+		</ul>
+		<!-- End Footer -->
+
+	</div>
+	<div id="install-theme"><a href="http://www.tumblr.com/theme/9773">Install Headline</a></div>
+	
+		{block:Date}{block:IfDisqusShortname}
+		<!-- Disqus Integration -->
+		<script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>
+		<script type="text/javascript">
+		//<![CDATA[
+		(function() {
+			var links = document.getElementsByTagName('a');
+			var query = '?';
+			for(var i = 0; i < links.length; i++) {
+			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&amp;';
+			}
+			}
+			document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+		})();
+		//]]>
+		</script>
+		{/block:IfDisqusShortname}{/block:Date}
+		
+		{block:IfTwitterAPIKey}<!-- Twitter Anywhere Integration -->
+		<script type="text/javascript">
+		$(window).load(function(){
+			twttr.anywhere(function (T) {
+				T("#twitter,#tweetline").hovercards();
+				T(".follow-me").hovercards({infer:true});
+			});
+		});
+		</script>
+		{/block:IfTwitterAPIKey}
+
+		{block:IfEnableStreampad}<!-- Streampad Integration --><script type="text/javascript" src="http://o.aolcdn.com/art/merge?f=/_media/sp/sp-player.js&amp;f=/_media/sp/sp-player-tumblr.js&amp;expsec=86400&amp;ver=11&amp;bgcolor=#000000&amp;clicktext=Play%20All%20Audio%20Posts&amp;clickimg=true&amp;showpop=false"></script>{block:IfEnableStreampad}
+		
+		{block:IfVigLinkAPIKey}
+		<script type="text/javascript">
+		  var vglnk_api_key = "{text:VigLink API Key}";
+		  var vglnk_domain = (("https:" == document.location.protocol) ? "https://" : "http://") + "api.viglink.com";
+		  document.write(unescape("%3Cscript src='" + vglnk_domain + "/api/vglnk.js?key=" + vglnk_api_key +
+			"' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		  try {
+			vglnk(vglnk_domain, vglnk_api_key);
+		  } catch(err) {}
+		</script>
+		{/block:IfVigLinkAPIKey}
+		
+		{block:ifGoogleAnalyticsWebPropertyID}
+		<!-- Google Analytics Integration -->
+		<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("{text:Google Analytics Web Property ID}");
+		pageTracker._trackPageview();
+		} catch(err) {}</script>
+		{/block:ifGoogleAnalyticsWebPropertyID}
+
+	</body>
+</html>

@@ -1,0 +1,4 @@
+/* ie7 */
+#search {overflow:hidden;}
+#search input {float:left;}
+#search #search-input { font-size: 1em; margin-top:5px;}
