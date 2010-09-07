@@ -11,7 +11,7 @@ The main features include:
 7. Streampad for Audio Playlists
 8. Disqus Comments
 9. Monetize via VigLink and Amazon&nbsp;Associates
-10. Google Analytics Tracking
+10. Google and Clicky Analytics Tracking
 
 ### Custom Fonts &amp; Colors ###
 
@@ -63,3 +63,5 @@ Similarly, by inserting your Amazon Associates ID in the "Amazon Tracking ID" fi
 ### Statistics Via Google Analytics ###
 
 If you use Google Analytics to track your blog's performance, you can quickly enable it by entering your full "Google Analytics Web Property ID", including the "UA" and dashes, in the form of: UA-XXXXX-YY.
+
+Clicky Analytics  may also be enabled via the Appearance menu by entering your Clicky Site ID. This ID is typically a six-digit number, and is available on your Clicky site preferences page.
