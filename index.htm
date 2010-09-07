@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<!--
-		Headline v1.5
-		August 16, 2010
+		Headline v1.6
+		September 7, 2010
 		Design by Airspace Workshop
 		http://www.airspaceworkshop.com
 	-->
@@ -44,6 +44,7 @@
 	<meta name="text:Twitter API Key" content=""/>
 	<meta name="text:Amazon Tracking ID" content=""/>
 	<meta name="text:VigLink API Key" content=""/>
+	<meta name="text:Clicky Site ID" content=""/>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>{block:PostSummary}{PostSummary} &ndash; {/block:PostSummary}{block:TagPage}{Tag} &ndash; {/block:TagPage}{block:DayPage}{Month} {DayOfMonth}, {Year} &ndash; {/block:DayPage}{block:SearchPage}Search Results For "{SearchQuery}" &ndash;  {/block:SearchPage}{Title}{block:IndexPage} &ndash; Page {CurrentPage}{/block:IndexPage}</title>
@@ -213,7 +214,7 @@
 
 			{block:Posts}
 			{block:PermalinkPage}{block:RebloggedFrom}<div class="root"><a href="{ReblogRootURL}" title="{PlaintextReblogRootTitle}">Original by {ReblogRootTitle}</a></div>{/block:RebloggedFrom}{/block:PermalinkPage}
-			<div class="post tagged-{TagsAsClasses}" id="post-{PostID}">
+			<div class="post{block:HasTags}{block:Tags} tagged-{URLSafeTag}{/block:Tags}{/block:HasTags}" id="post-{PostID}">
 				{block:Date}
 				<dl>
 					<dt><a href="{Permalink}" title="Permalink">{12Hour}:{Minutes} {AmPm}{block:NewDayDate} - {ShortDayOfWeek}, {ShortMonth} {DayOfMonth}, {Year}{/block:NewDayDate}</a></dt>
@@ -480,6 +481,23 @@
 		pageTracker._trackPageview();
 		} catch(err) {}</script>
 		{/block:ifGoogleAnalyticsWebPropertyID}
+		
+		{block:ifClickySiteID}
+		<!-- Clicky Integration -->
+		<script type="text/javascript">
+		var clicky = { log: function(){ return; }, goal: function(){ return; }};
+		var clicky_site_id = {text:Clicky Site ID};
+		(function() {
+		  var s = document.createElement('script');
+		  s.type = 'text/javascript';
+		  s.async = true;
+		  s.src = ( document.location.protocol == 'https:' ? 'https://static.getclicky.com/js' : 'http://static.getclicky.com/js' );
+		  ( document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0] ).appendChild( s );
+		})();
+		</script>
+		<a title="Google Analytics Alternative" href="http://getclicky.com/{text:Clicky Site ID}"></a>
+		<noscript><p><img alt="Clicky" width="1" height="1" src="http://in.getclicky.com/{text:Clicky Site ID}ns.gif" /></p></noscript>
+		{/block:ifClickySiteID}
 
 	</body>
 </html>
