@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<!--
-		Headline v1.6
-		September 7, 2010
+		Headline v1.6.1
+		September 13, 2010
 		Design by Airspace Workshop
 		http://www.airspaceworkshop.com
 	-->
@@ -80,7 +80,7 @@
 	.post dl a, .post .disqus, .root { font-family: {font:Meta}; text-shadow: {color:Text Shadow} 1px 1px 0px; }
 	#tags li, #share li { font-family: {font:Meta}; text-shadow: {color:Text Shadow} 1px 1px 0px; }
 	
-	body { color: {color:Body Text}; background: {color:Background} {block:IfBackgroundImage}url({image:Background}){block:IfTileBackgroundImage}repeat{/block:IfTileBackgroundImage} top center;{/block:IfBackgroundImage} }
+	body { color: {color:Body Text}; background: {color:Background} {block:IfBackgroundImage}url({image:Background}){block:IfTileBackgroundImage} repeat{/block:IfTileBackgroundImage}{block:IfNotTileBackgroundImage} no-repeat{/block:IfNotTileBackgroundImage} top center;{/block:IfBackgroundImage} }
 	a { color: {color:Links}; text-decoration: none; }
 	a:hover { color: {color:Links}; text-decoration: underline;}
 	#header h1 a, #tweetline { color: {color:Body Text} !important; }
